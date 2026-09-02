@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* Colores principales */
+    --color-primary: #1D2539;
+    --color-secondary: #324772;
+
+    /* Acento */
+    --color-gold: #f1dfa1;
+
+    /* Fondos claros */
+    --color-cream: #F7F6EF;
+    --color-beige: #EADFD5;
+    --color-light-gray: #F1F1F1;
+}
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #2C2825;
+}
+
+header {
+    background-image: url('hero-web.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 65vh;
+    padding: 14vh 8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header nav, header nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    justify-content: flex-end;
+    list-style: none;
+    gap: 60px;
+}
+
+header article {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 40%;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 500;
+    color: var(--color-light-gray);
+    line-height: 110%;
+    letter-spacing: -5%;
+}
+
+h1 span {
+    color: var(--color-gold);
+    font-weight: 600;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--color-beige);
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--color-gold);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+#logo {
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    opacity: 0.4;
+    width: 150px;
+    height: auto;
+}
+
+.btn {
+    background-color: var(--color-gold);
+    color: var(--color-primary);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section, #areas-de-practica{
+    padding: 15vh 10vw;
+}
+
+#tags{
+    padding: 6vh 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15vw;
+    background-color: var(--color-primary);
+}
+
+#tags article h3 {
+    font-size: 40px;
+    line-height: 100%;
+    font-weight: 600;
+    letter-spacing: -5%;
+    color: var(--color-primary);
+}
+
+#tags article p {
+    font-size: 16px;
+    color: var(--color-primary);
+    margin: 5px 0px 0px 0px;
+    letter-spacing: -2%;
+}
+
+#areas-de-practica, #testimonios, #agendar-cita {
+    text-align: center;
+    background-color: #e7e9ed;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#areas-de-practica h2, #testimonios h2, #agendar-cita h2, #sobre-mi h2 {
+    font-size: 24px;
+    line-height: 100%;
+    font-weight: 600;
+    letter-spacing: -5%;
+    color: var(--color-primary);
+}
+
+#areas-de-practica h3, #testimonios h3, #agendar-cita h3, #sobre-mi h3 {
+    font-size: 46px;
+    line-height: 100%;
+    font-weight: 500;
+    letter-spacing: -6%;
+}
+
+#areas-de-practica main {
+    margin-top: 40px;
+    display: flex;
+    overflow-x: auto;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 20px;
+}
+
+#areas-de-practica main article {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+
+#areas-de-practica main article img {
+    width: 250px;
+    border-radius: 10px;
+    height: auto;
+}
+
+#areas-de-practica main article p {
+    font-size: 20px;
+    color: var(--color-light-gray);
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+}
+
+#areas-de-practica main article:hover {
+    filter: brightness(1.40);
+}
+
+#testimonios {
+    background-color: var(--color-cream);
+}
+
+#agendar-cita h2 {
+    color: #3b5da0;
+}
+
+#agendar-cita h3 {
+    color: var(--color-light-gray);
+}
+
+#agendar-cita {
+    background-color: var(--color-primary);
+}
+
+#agendar-cita div {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#agendar-cita h3 {
+    width: 70%;
+}
+
+#btn-primary, #btn-secondary {
+    padding: 15px 50px;
+    font-size: 16px;
+    border-radius: 10px; /* píldora, como tus piezas de Instagram */
+    border: none;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -2%;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Primario: dorado, el único acento cálido de la paleta */
+#btn-primary {
+    background-color: var(--color-gold);
+    color: var(--color-navy-dark);
+}
+
+#btn-primary:hover {
+    background-color: #f0e7c9; /* dorado un poco más claro */
+    transform: translateY(-2px);
+}
+
+/* Secundario: outline, sin relleno, menos protagonismo */
+#btn-secondary {
+    background-color: transparent;
+    color: var(--color-cream);
+    border: 1px solid var(--color-cream);
+}
+
+#btn-secondary:hover {
+    transform: translateY(-2px);
+}
+
+#sobre-mi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+#sobre-mi > div, #sobre-mi img {
+    width: 45%;
+}
+
+#sobre-mi > div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#sobre-mi div p {
+    font-size: 16px;
+    line-height: 130%;
+    color: #343434;
+}
