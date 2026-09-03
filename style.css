@@ -17,6 +17,8 @@
 html {
     box-sizing: border-box;
     margin: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
@@ -31,11 +33,29 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 65vh;
-    padding: 14vh 8vw;
+    height: 85vh;
+    padding: 0 8vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 24px 8vw;
+    background-color: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+}
+
+header nav.scrolled {
+    background-color: var(--color-primary);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    padding: 16px 8vw;
 }
 
 header nav, header nav ul{
@@ -50,11 +70,13 @@ header nav ul {
     gap: 60px;
 }
 
-header article {
+header article,
+header > div:last-child {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 40px;
     width: 40%;
+    text-align: center;
 }
 
 h1 {
@@ -70,16 +92,40 @@ h1 span {
     font-weight: 600;
 }
 
+.hero-btn {
+    align-self: center;
+    display: inline-block;
+    background-color: var(--color-gold);
+    color: var(--color-primary);
+    padding: 16px 44px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -1%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-btn:hover {
+    background-color: #f0e7c9;
+    transform: translateY(-2px);
+}
+
 header nav ul li a {
     text-decoration: none;
-    color: var(--color-beige);
-    font-weight: 500;
-    font-size: 16px;
-    transition: color 0.3s ease;
+    color: var(--color-light-gray);
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 4px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 header nav ul li a:hover {
     color: var(--color-gold);
+    border-bottom-color: var(--color-gold);
 }
 
 
@@ -107,7 +153,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-section, #areas-de-practica{
+section, #areas-de-practica, footer {
     padding: 15vh 10vw;
 }
 
@@ -118,7 +164,7 @@ section, #areas-de-practica{
     align-items: center;
     text-align: center;
     gap: 15vw;
-    background-color: var(--color-primary);
+    background-color: var(--color-cream);
 }
 
 #tags article h3 {
@@ -131,20 +177,23 @@ section, #areas-de-practica{
 
 #tags article p {
     font-size: 16px;
-    color: var(--color-primary);
+    color: #343434;
     margin: 5px 0px 0px 0px;
     letter-spacing: -2%;
 }
 
-#areas-de-practica, #testimonios, #agendar-cita {
+#areas-de-practica, #testimonios{
     text-align: center;
-    background-color: #e7e9ed;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-#areas-de-practica h2, #testimonios h2, #agendar-cita h2, #sobre-mi h2 {
+#areas-de-practica {
+    background-color: #ffffff;
+}
+
+#areas-de-practica h2, #testimonios h2, #agendar-cita h2, #sobre-mi h2, #newsletter h2 {
     font-size: 24px;
     line-height: 100%;
     font-weight: 600;
@@ -152,54 +201,154 @@ section, #areas-de-practica{
     color: var(--color-primary);
 }
 
-#areas-de-practica h3, #testimonios h3, #agendar-cita h3, #sobre-mi h3 {
+#areas-de-practica h3, #testimonios h3, #agendar-cita h3, #sobre-mi h3, #newsletter h3 {
     font-size: 46px;
     line-height: 100%;
     font-weight: 500;
     letter-spacing: -6%;
 }
 
-#areas-de-practica main {
-    margin-top: 40px;
-    display: flex;
-    overflow-x: auto;
-    justify-content: space-between;
-    align-items: center;
+#areas-de-practica .cards {
+    list-style: none;
+    margin: 40px 0 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-    padding-bottom: 20px;
+    justify-items: center;
 }
 
-#areas-de-practica main article {
+#areas-de-practica .cards li {
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 20px;
 }
 
-#areas-de-practica main article img {
-    width: 250px;
-    border-radius: 10px;
+#areas-de-practica .cards li img {
+    width: 100%;
     height: auto;
 }
 
-#areas-de-practica main article p {
-    font-size: 20px;
-    color: var(--color-light-gray);
-    margin: 0;
-    padding: 0;
-    font-weight: 500;
+.area-img-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 290px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-#areas-de-practica main article:hover {
-    filter: brightness(1.40);
+.area-img-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.area-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(20, 20, 25, 0.55) 0%, rgba(20, 20, 25, 0.05) 60%, transparent 100%);
+    border-radius: 10px;
+    pointer-events: none;
+    transition: background 0.4s ease;
+}
+
+.area-img-wrap:hover .area-overlay {
+    background: linear-gradient(to top, rgba(20, 20, 25, 0.05) 0%, transparent 60%, transparent 100%);
+}
+
+.area-img-wrap h4 {
+    position: absolute;
+    bottom: 22px;
+    left: 18px;
+    right: 18px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    line-height: 1.2;
+    color: #ffffff;
+    z-index: 2;
+    pointer-events: none;
+    text-align: left;
 }
 
 #testimonios {
-    background-color: var(--color-cream);
+    background: linear-gradient(180deg, #edf0f3 0%, #e7e9ed 100%);
+}
+
+.testimonios-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.testimonial {
+    flex: 1 1 280px;
+    max-width: 360px;
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    text-align: left;
+    box-shadow: 0 4px 16px rgba(29, 37, 57, 0.06);
+    border-top: 3px solid var(--color-gold);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 32px rgba(29, 37, 57, 0.12);
+}
+
+.testimonial .quote-mark {
+    font-size: 56px;
+    line-height: 0.6;
+    font-weight: 700;
+    color: var(--color-gold);
+    height: 30px;
+}
+
+.testimonial .quote {
+    margin: 0;
+    font-size: 16px;
+    line-height: 165%;
+    color: #343434;
+}
+
+.testimonial .author {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    border-top: 1px solid #e7e9ed;
+    padding-top: 18px;
+}
+
+.testimonial .name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.testimonial .role {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #9c7a33;
 }
 
 #agendar-cita h2 {
-    color: #3b5da0;
+    color: #324772;
 }
 
 #agendar-cita h3 {
@@ -208,16 +357,23 @@ section, #areas-de-practica{
 
 #agendar-cita {
     background-color: var(--color-primary);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 150px;
+    align-items: start;
+    text-align: left;
 }
 
-#agendar-cita div {
+#agendar-cita .agendar-left {
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
 }
 
 #agendar-cita h3 {
-    width: 70%;
+    margin: 0;
+    width: 90%;
 }
 
 #btn-primary, #btn-secondary {
@@ -237,7 +393,7 @@ section, #areas-de-practica{
 /* Primario: dorado, el único acento cálido de la paleta */
 #btn-primary {
     background-color: var(--color-gold);
-    color: var(--color-navy-dark);
+    color: var(--color-primary);
 }
 
 #btn-primary:hover {
@@ -277,3 +433,438 @@ section, #areas-de-practica{
     line-height: 130%;
     color: #343434;
 }
+
+footer {
+    background-color: var(--color-primary);
+}
+
+.footer-main {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 190px;
+    flex-wrap: wrap;
+}
+
+.footer-brand {
+    margin-right: auto;
+}
+
+.footer-brand img {
+    display: block;
+}
+
+.footer-col h4 {
+    font-size: 14px;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    color: var(--color-gold);
+    margin: 0 0 16px 0;
+}
+
+.footer-col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.footer-col a {
+    color: var(--color-light-gray);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+    color: var(--color-gold);
+}
+
+#newsletter {
+    background-color: var(--color-cream);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.blog-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 8px;
+    padding-bottom: 20px;
+    margin: 40px 0 0 0;
+}
+
+.blog-card {
+    flex: 0 0 auto;
+    width: 320px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: left;
+    border: 1px solid #ececec;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    box-shadow: 0 6px 20px rgba(29, 37, 57, 0.08);
+}
+
+.blog-category {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #9c7a33;
+}
+
+.blog-card h4 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: -1%;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+.blog-date {
+    font-size: 13px;
+    font-weight: 400;
+    color: #888888;
+}
+
+.blog-card p {
+    margin: 6px 0 0 0;
+    font-size: 15px;
+    line-height: 155%;
+    color: #343434;
+}
+
+.blog-modal {
+    border: none;
+    border-radius: 10px;
+    padding: 44px 40px;
+    max-width: 568px;
+    width: 70%;
+    text-align: left;
+    box-shadow: 0 12px 35px rgba(29, 37, 57, 0.18);
+}
+
+.blog-modal::backdrop {
+    background-color: rgba(29, 37, 57, 0.6);
+}
+
+.blog-modal[open] {
+    animation: modal-in 0.25s ease-out;
+}
+
+@keyframes modal-in {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.blog-modal .modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    color: #888888;
+    transition: color 0.2s ease;
+}
+
+.blog-modal .modal-close:hover {
+    color: var(--color-primary);
+}
+
+.blog-modal h2 {
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: -1%;
+    color: var(--color-primary);
+    margin: 12px 0 8px 0;
+}
+
+.blog-modal .modal-body {
+    margin-top: 20px;
+    border-top: 1px solid #e7e9ed;
+    padding-top: 20px;
+}
+
+.blog-modal .modal-body p {
+    margin: 0 0 16px 0;
+    font-size: 14px;
+    line-height: 165%;
+    letter-spacing: -0.3px;
+    color: #3a3a3a;
+}
+
+.blog-modal .modal-body p:last-child {
+    margin-bottom: 0;
+}
+
+.blog-modal .modal-body h5 {
+    margin: 22px 0 8px 0;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -1%;
+    text-transform: uppercase;
+    color: #9c7a33;
+    text-align: left;
+}
+
+
+@media (max-width: 1100px) {
+    #areas-de-practica .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #areas-de-practica .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+#agendar-cita .pasos {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    width: 100%;
+    text-align: left;
+}
+
+#agendar-cita .paso {
+    display: block;
+    text-align: left;
+}
+
+.paso-num {
+    display: block;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.25);
+    margin-bottom: 18px;
+    letter-spacing: -2%;
+}
+
+#agendar-cita .paso-content {
+    display: block;
+    text-align: left;
+}
+
+.paso-content h4 {
+    margin: 0 0 14px 0;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -1%;
+    color: var(--color-cream);
+}
+
+.paso-content p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 165%;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 900px) {
+    #agendar-cita {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        align-items: flex-start;
+    }
+
+    #agendar-cita .agendar-left,
+    #agendar-cita .pasos,
+    #agendar-cita .paso,
+    #agendar-cita .paso-content {
+        text-align: left;
+    }
+
+    #agendar-cita h3 {
+        width: 100%;
+    }
+
+    #agendar-cita .pasos {
+        width: 100%;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 1100px) {
+    header nav ul {
+        gap: 30px;
+    }
+    .footer-main {
+        gap: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    #areas-de-practica .cards {
+        grid-template-columns: 1fr;
+    }
+
+    #areas-de-practica .cards li img,
+    #areas-de-practica .cards li .area-img-wrap {
+        max-width: 100%;
+    }
+
+    header {
+        height: 70vh;
+        padding: 0 6vw;
+    }
+
+    header article,
+    header > div:last-child {
+        width: 70%;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    header nav ul {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 12px;
+    }
+
+    section, #areas-de-practica, footer {
+        padding: 10vh 6vw;
+    }
+
+    #tags {
+        flex-direction: column;
+        gap: 30px;
+        padding: 8vh 6vw;
+    }
+
+    #sobre-mi {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    #sobre-mi > div,
+    #sobre-mi img {
+        width: 100%;
+    }
+
+    #sobre-mi img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    #agendar-cita {
+        gap: 40px;
+    }
+
+    #agendar-cita .agendar-left {
+        gap: 36px;
+    }
+
+    #agendar-cita h3 {
+        font-size: 36px;
+    }
+
+    #testimonios h3,
+    #sobre-mi h3,
+    #agendar-cita h3 {
+        font-size: 34px;
+    }
+
+    .blog-grid {
+        padding-bottom: 16px;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    .footer-brand {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #areas-de-practica .cards {
+        grid-template-columns: 1fr;
+    }
+
+    header article,
+    header > div:last-child {
+        width: 85%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    header nav {
+        padding: 16px 4vw;
+    }
+
+    header nav ul {
+        gap: 12px;
+    }
+
+    #btn-primary, #btn-secondary {
+        padding: 13px 34px;
+        font-size: 15px;
+    }
+
+    #agendar-cita .pasos {
+        gap: 28px;
+    }
+
+    .paso-num {
+        font-size: 32px;
+    }
+}
+
+.anim {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    will-change: opacity, transform;
+}
+
+.anim.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.anim-delay-1 { transition-delay: 0.12s; }
+.anim-delay-2 { transition-delay: 0.24s; }
+.anim-delay-3 { transition-delay: 0.36s; }
+
+.count {
+    display: inline-block;
+}
+

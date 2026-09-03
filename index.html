@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -11,94 +11,234 @@
 <body>
     <img src="Sole logo.png" alt="Logo de Soledad Irrumberri" id="logo" width="100" height="100">
     <header>
-        <nav aria-label="Navegación principal">
+        <nav id="nav" aria-label="Navegación principal">
             <a href="/" aria-label="Ir al inicio">
-                <img src="isotipo.png" alt="Soledad Irrumberri" width="" height="70">
+                <img src="isotipo.png" alt="Soledad Irrumberri" height="70">
             </a>
 
             <ul>
                 <li><a href="/">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#areas-de-practica">Servicios</a></li>
                 <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#agendar-cita">Contacto</a></li>
             </ul>
         </nav>
-        <article>
-            <div>
-                <h1>Entender tu situación, es el <span>primer paso</span> para encontrar una solución</h1>
-            </div>
-        </article>
+        <div>
+            <h1>Entender tu situación, es el <span>primer paso</span> para encontrar una solución</h1>
+            <a href="#agendar-cita" class="hero-btn">Agendar cita</a>
+        </div>
     </header>
+    <main>
     <section id="tags">
-        <article>
-            <h3>50+</h3>
+        <article class="anim">
+            <h3><span class="count" data-count="50">0</span><span class="suffix">+</span></h3>
             <p>Casos de éxito</p>
         </article>
-        <article>
-            <h3>50+</h3>
-            <p>Casos de éxito</p>
+        <article class="anim anim-delay-1">
+            <h3><span class="count" data-count="15">0</span><span class="suffix">+</span></h3>
+            <p>Años de experiencia</p>
         </article>
-        <article>
-            <h3>50+</h3>
-            <p>Casos de éxito</p>
+        <article class="anim anim-delay-2">
+            <h3><span class="count" data-count="120">0</span><span class="suffix">+</span></h3>
+            <p>Asesorías brindadas</p>
         </article>
-        <article>
-            <h3>50+</h3>
-            <p>Casos de éxito</p>
+        <article class="anim anim-delay-3">
+            <h3><span class="count" data-count="98">0</span><span class="suffix">%</span></h3>
+            <p>Clientes satisfechos</p>
         </article>
     </section>
     <section id="areas-de-practica">
-        <h2>Áreas de práctica</h2>
-        <h3>Asesoramiento integral en cada <br> etapa de tu situación legal</h3>
-        <main>
-            <article>
-                <img src="Agregar un subtítulo (2).PNG" alt="" srcset="">
-                <h4>Divorcios</h4>
-            </article>
-            <article>
-                <img src="Agregar un subtítulo (2).PNG" alt="" srcset="">
-                <h4>Divorcios</h4>
-            </article>
-            <article>
-                <img src="Agregar un subtítulo (2).PNG" alt="" srcset="">
-                <h4>Divorcios</h4>
-            </article>
-            <article>
-                <img src="Agregar un subtítulo (2).PNG" alt="" srcset="">
-                <h4>Divorcios</h4>
-            </article>
-            <article>
-                <img src="Agregar un subtítulo (2).PNG" alt="" srcset="">
-                <h4>Divorcios</h4>
-            </article>
-            <article>
-                <img src="Agregar un subtítulo (2).PNG" alt="" srcset="">
-                <h4>Divorcios</h4>
-            </article>
-            <article>
-                <img src="Agregar un subtítulo (2).PNG" alt="" srcset="">
-                <h4>Divorcios</h4>
-            </article>
-            
-        </main>
+        <h2 class="anim">Áreas de práctica</h2>
+        <h3 class="anim anim-delay-1">Asesoramiento integral en cada <br> etapa de tu situación legal</h3>
+        <ul class="cards">
+            <li class="anim">
+                <div class="area-img-wrap">
+                    <img src="card-area.png" alt="">
+                    <div class="area-overlay"></div>
+                    <h4>Planificación sucesoria</h4>
+                </div>
+            </li>
+            <li class="anim anim-delay-1">
+                <div class="area-img-wrap">
+                    <img src="card-area.png" alt="">
+                    <div class="area-overlay"></div>
+                    <h4>Sucesiones</h4>
+                </div>
+            </li>
+            <li class="anim anim-delay-2">
+                <div class="area-img-wrap">
+                    <img src="card-area.png" alt="">
+                    <div class="area-overlay"></div>
+                    <h4>Filiación</h4>
+                </div>
+            </li>
+            <li class="anim anim-delay-3">
+                <div class="area-img-wrap">
+                    <img src="card-area.png" alt="">
+                    <div class="area-overlay"></div>
+                    <h4>Divorcio y división de sociedad conyugal</h4>
+                </div>
+            </li>
+            <li class="anim">
+                <div class="area-img-wrap">
+                    <img src="card-area.png" alt="">
+                    <div class="area-overlay"></div>
+                    <h4>Derecho inmobiliario</h4>
+                </div>
+            </li>
+            <li class="anim anim-delay-1">
+                <div class="area-img-wrap">
+                    <img src="card-area.png" alt="">
+                    <div class="area-overlay"></div>
+                    <h4>Contratos civiles y comerciales</h4>
+                </div>
+            </li>
+            <li class="anim anim-delay-2">
+                <div class="area-img-wrap">
+                    <img src="card-area.png" alt="">
+                    <div class="area-overlay"></div>
+                    <h4>Defensa del consumidor</h4>
+                </div>
+            </li>
+            <li class="anim anim-delay-3">
+                <div class="area-img-wrap">
+                    <img src="card-area.png" alt="">
+                    <div class="area-overlay"></div>
+                    <h4>Derecho laboral</h4>
+                </div>
+            </li>
+        </ul>
+
+        <dialog class="blog-modal" id="area-modal-1">
+            <button class="modal-close" data-close aria-label="Cerrar">×</button>
+            <div class="blog-category">Área de práctica</div>
+            <h2>Planificación sucesoria</h2>
+            <div class="modal-body">
+                <p>Organización de bienes para el futuro: evaluación integral, estrategia jurídica, plan de trabajo y acompañamiento profesional.</p>
+            </div>
+        </dialog>
+
+        <dialog class="blog-modal" id="area-modal-2">
+            <button class="modal-close" data-close aria-label="Cerrar">×</button>
+            <div class="blog-category">Área de práctica</div>
+            <h2>Sucesiones</h2>
+            <div class="modal-body">
+                <p>Gestión de trámites sucesorios, declaratorias de herederos, inscripción de bienes y resolución de conflictos hereditarios.</p>
+            </div>
+        </dialog>
+
+        <dialog class="blog-modal" id="area-modal-3">
+            <button class="modal-close" data-close aria-label="Cerrar">×</button>
+            <div class="blog-category">Área de práctica</div>
+            <h2>Filiación</h2>
+            <div class="modal-body">
+                <p>Reconocimiento, impugnación y determinación de filiación, para proteger derechos y fortalecer lazos familiares.</p>
+            </div>
+        </dialog>
+
+        <dialog class="blog-modal" id="area-modal-4">
+            <button class="modal-close" data-close aria-label="Cerrar">×</button>
+            <div class="blog-category">Área de práctica</div>
+            <h2>Divorcio y división de sociedad conyugal</h2>
+            <div class="modal-body">
+                <p>Procesos de divorcio, liquidación de bienes y acuerdos patrimoniales.</p>
+            </div>
+        </dialog>
+
+        <dialog class="blog-modal" id="area-modal-5">
+            <button class="modal-close" data-close aria-label="Cerrar">×</button>
+            <div class="blog-category">Área de práctica</div>
+            <h2>Derecho inmobiliario</h2>
+            <div class="modal-body">
+                <p>Compraventas, alquileres, contratos y conflictos vinculados a bienes inmuebles.</p>
+            </div>
+        </dialog>
+
+        <dialog class="blog-modal" id="area-modal-6">
+            <button class="modal-close" data-close aria-label="Cerrar">×</button>
+            <div class="blog-category">Área de práctica</div>
+            <h2>Contratos civiles y comerciales</h2>
+            <div class="modal-body">
+                <p>Redacción, revisión y asesoramiento en todo tipo de contratos, previniendo conflictos.</p>
+            </div>
+        </dialog>
+
+        <dialog class="blog-modal" id="area-modal-7">
+            <button class="modal-close" data-close aria-label="Cerrar">×</button>
+            <div class="blog-category">Área de práctica</div>
+            <h2>Defensa del consumidor</h2>
+            <div class="modal-body">
+                <p>Asesoramiento legal para reclamos frente a abusos comerciales.</p>
+            </div>
+        </dialog>
+
+        <dialog class="blog-modal" id="area-modal-8">
+            <button class="modal-close" data-close aria-label="Cerrar">×</button>
+            <div class="blog-category">Área de práctica</div>
+            <h2>Derecho laboral</h2>
+            <div class="modal-body">
+                <p>Para empleados: conflictos laborales, accidentes de trabajo, vínculo con el sindicato.</p>
+                <p>Para empleadores: normativa laboral vigente, contratos, políticas internas y prevención de conflictos.</p>
+            </div>
+        </dialog>
     </section>
     <section id="testimonios">
-        <h2>Testimonios</h2>
-        <h3>Lo que dicen quienes ya confiaron en mí</h3>
+        <h2 class="anim">Testimonios</h2>
+        <h3 class="anim anim-delay-1">Lo que dicen quienes ya confiaron en mí</h3>
+        <div class="testimonios-grid">
+            <article class="testimonial anim">
+                <div class="quote-mark" aria-hidden="true">“</div>
+                <p class="quote">Gracias por acompañarme y darme claridad en un momento tan difícil. Siempre atenta y profesional en cada etapa.</p>
+                <div class="author">
+                    <span class="name">María G.</span>
+                    <span class="role">Derecho de familia</span>
+                </div>
+            </article>
+            <article class="testimonial anim anim-delay-1">
+                <div class="quote-mark" aria-hidden="true">“</div>
+                <p class="quote">Me explicó todo con paciencia y logró que me sintiera en buenas manos desde la primera consulta. Muy recomendable.</p>
+                <div class="author">
+                    <span class="name">Jorge L.</span>
+                    <span class="role">Sucesiones</span>
+                </div>
+            </article>
+            <article class="testimonial anim anim-delay-2">
+                <div class="quote-mark" aria-hidden="true">“</div>
+                <p class="quote">Atención cercana y respuesta rápida en todo momento. Resolvió mi caso de forma clara y eficiente.</p>
+                <div class="author">
+                    <span class="name">Carla M.</span>
+                    <span class="role">Derecho laboral</span>
+                </div>
+            </article>
+        </div>
     </section>
     <section id="agendar-cita">
-        <h2>Agendar cita</h2>
-        <div>
-            <h3> Contame tu situación y te ayudo a encontrar el mejor camino legal.</h3>
-        </div>
-        <div>
-            <button id="btn-secondary">¿Cómo trabajo?</button>
+        <div class="agendar-left anim">
+            <h2>Asesoría personalizada</h2>
+            <h3>Contame tu situación y te ayudo a encontrar el mejor camino legal.</h3>
             <button id="btn-primary">Agendar cita</button>
+        </div>
+        <div class="pasos">
+            <h2 class="anim">¿Cómo funciona?</h2>
+            <div class="paso anim anim-delay-1">
+                <span class="paso-num">01</span>
+                <div class="paso-content">
+                    <h4>Primer encuentro</h4>
+                    <p>Se establece el primer vínculo con el cliente, quien comenta cuál es el conflicto ante el que se encuentra y cuál es su pretensión para solucionarlo. Se reúne toda la documentación que tiene en su poder para su posterior análisis y se coordina la segunda reunión, ya incluida dentro de la asesoría.</p>
+                </div>
+            </div>
+            <div class="paso anim anim-delay-2">
+                <span class="paso-num">02</span>
+                <div class="paso-content">
+                    <h4>Segundo encuentro</h4>
+                    <p>Se plantean las posibles soluciones al requerimiento del cliente, explicando si es posible ir por la línea pretendida o si conviene buscar otras alternativas, detallando en cada caso cuáles serían los pasos a seguir.</p>
+                </div>
+            </div>
         </div>
     </section>
     <section id="sobre-mi">
-        <img src="Agregar un subtítulo - 68 2.png" alt="" srcset="">
-        <div>
+        <img class="anim" src="Agregar un subtítulo - 68 2.png" alt="">
+        <div class="anim anim-delay-1">
             <h2>Sobre mí</h2>
             <h3>Soy Soledad Irumberri</h3>
             <div>
@@ -116,6 +256,209 @@
             </div>
         </div>
     </section>
+    <section id="newsletter">
+        <h2 class="anim">Novedades</h2>
+        <h3 class="anim anim-delay-1">Actualizaciones y contenido legal de interés</h3>
+        <div class="blog-grid">
+            <article class="blog-card anim" data-open="modal-1" tabindex="0">
+                <div class="blog-category">Derecho de familia</div>
+                <h4>Qué considerar antes de iniciar un divorcio</h4>
+                <span class="blog-date">12 de agosto, 2026</span>
+                <p>Consejos prácticos para afrontar el proceso con claridad y tranquilidad.</p>
+            </article>
+            <article class="blog-card anim anim-delay-1" data-open="modal-2" tabindex="0">
+                <div class="blog-category">Sucesiones</div>
+                <h4>Herencias: pasos fundamentales a seguir</h4>
+                <span class="blog-date">5 de agosto, 2026</span>
+                <p>Lo esencial para encarar una sucesión de forma ordenada y sin demoras.</p>
+            </article>
+            <article class="blog-card anim anim-delay-2" data-open="modal-3" tabindex="0">
+                <div class="blog-category">Derecho laboral</div>
+                <h4>Tus derechos ante un despido</h4>
+                <span class="blog-date">28 de julio, 2026</span>
+                <p>Qué te corresponde y cómo proteger tu situación laboral.</p>
+            </article>
+            <article class="blog-card" data-open="modal-4" tabindex="0">
+                <div class="blog-category">Derecho inmobiliario</div>
+                <h4>Alquileres: qué tener en cuenta antes de firmar</h4>
+                <span class="blog-date">15 de julio, 2026</span>
+                <p>Claves para revisar un contrato de alquiler y evitar sorpresas.</p>
+            </article>
+            <article class="blog-card" data-open="modal-5" tabindex="0">
+                <div class="blog-category">Defensa del consumidor</div>
+                <h4>Cómo reclamar ante un abuso comercial</h4>
+                <span class="blog-date">2 de julio, 2026</span>
+                <p>Los pasos para defender tus derechos como consumidor.</p>
+            </article>
+            <article class="blog-card" data-open="modal-6" tabindex="0">
+                <div class="blog-category">Contratos</div>
+                <h4>Revisión de contratos antes de firmar</h4>
+                <span class="blog-date">20 de junio, 2026</span>
+                <p>Por qué conviene asesorarse antes de comprometerte.</p>
+            </article>
+        </div>
+
+        <dialog class="blog-modal" id="modal-1">
+            <button class="modal-close" data-close aria-label="Cerrar">×</button>
+            <div class="blog-category">Derecho de familia</div>
+            <h2>Qué considerar antes de iniciar un divorcio</h2>
+            <span class="blog-date">12 de agosto, 2026</span>
+            <div class="modal-body">
+                <p>Iniciar un divorcio es una decisión importante que puede generar dudas y estrés. Contar con la orientación adecuada hace la diferencia en cada etapa del proceso.</p>
+                <p>Entre los puntos a considerar se encuentran la organización de los bienes, los acuerdos sobre los hijos y las distintas vías legales disponibles para resolver tu situación de la forma más ágil y menos conflictiva posible.</p>
+                <p>Cada caso es particular. Por eso, asesorarse con un profesional permite entender tus derechos y tomar decisiones informadas y seguras.</p>
+            </div>
+        </dialog>
+
+        <dialog class="blog-modal" id="modal-2">
+            <button class="modal-close" data-close aria-label="Cerrar">×</button>
+            <div class="blog-category">Sucesiones</div>
+            <h2>Herencias: pasos fundamentales a seguir</h2>
+            <span class="blog-date">5 de agosto, 2026</span>
+            <div class="modal-body">
+                <p>Ante el fallecimiento de un familiar, es normal tener dudas sobre cómo iniciar una sucesión y qué documentación se necesita.</p>
+                <p>El proceso administrativo y judicial puede variar según cada situación. Conocer los pasos fundamentales ayuda a ordenar la gestión y evitar demoras innecesarias.</p>
+                <p>Recibir el acompañamiento de un abogado especializado facilita el camino y brinda tranquilidad en un momento delicado.</p>
+            </div>
+        </dialog>
+
+        <dialog class="blog-modal" id="modal-3">
+            <button class="modal-close" data-close aria-label="Cerrar">×</button>
+            <div class="blog-category">Derecho laboral</div>
+            <h2>Tus derechos ante un despido</h2>
+            <span class="blog-date">28 de julio, 2026</span>
+            <div class="modal-body">
+                <p>Un despido puede generar incertidumbre respecto a las indemnizaciones y los derechos que te corresponden.</p>
+                <p>Es fundamental conocer qué te corresponde según tu situación laboral, los plazos para reclamar y las vías disponibles para defender tus derechos.</p>
+                <p>Contar con asesoramiento legal te permite actuar con seguridad y tomar las mejores decisiones.</p>
+            </div>
+        </dialog>
+
+        <dialog class="blog-modal" id="modal-4">
+            <button class="modal-close" data-close aria-label="Cerrar">×</button>
+            <div class="blog-category">Derecho inmobiliario</div>
+            <h2>Alquileres: qué tener en cuenta antes de firmar</h2>
+            <span class="blog-date">15 de julio, 2026</span>
+            <div class="modal-body">
+                <p>Antes de firmar un contrato de alquiler es importante revisar cláusulas, plazos y condiciones para evitar sorpresas durante la vigencia del vínculo.</p>
+                <p>Conocer tus derechos como inquilino y las obligaciones de ambas partes permite encarar la relación de forma segura y transparente.</p>
+                <p>Contar con asesoramiento previo te ayuda a tomar decisiones informadas.</p>
+            </div>
+        </dialog>
+
+        <dialog class="blog-modal" id="modal-5">
+            <button class="modal-close" data-close aria-label="Cerrar">×</button>
+            <div class="blog-category">Defensa del consumidor</div>
+            <h2>Cómo reclamar ante un abuso comercial</h2>
+            <span class="blog-date">2 de julio, 2026</span>
+            <div class="modal-body">
+                <p>Los consumidores tienen derechos y existen mecanismos para reclamar frente a prácticas abusivas.</p>
+                <p>Conocer los pasos a seguir y la documentación necesaria facilita la defensa de tus intereses y fortalece tu posición.</p>
+                <p>El asesoramiento legal acompaña el proceso para obtener una resolución favorable.</p>
+            </div>
+        </dialog>
+
+        <dialog class="blog-modal" id="modal-6">
+            <button class="modal-close" data-close aria-label="Cerrar">×</button>
+            <div class="blog-category">Contratos</div>
+            <h2>Revisión de contratos antes de firmar</h2>
+            <span class="blog-date">20 de junio, 2026</span>
+            <div class="modal-body">
+                <p>Firmar un contrato sin revisarlo puede implicar obligaciones que no se comprenden del todo.</p>
+                <p>Una lectura profesional permite detectar cláusulas desfavorables y negociar condiciones más justas antes de comprometerte.</p>
+                <p>La prevención evita conflictos futuros y brinda seguridad jurídica.</p>
+            </div>
+        </dialog>
+    </section>
+    </main>
+    <footer>
+        <div class="footer-main">
+            <div class="footer-brand anim">
+                <img src="isotipo.png" alt="Soledad Irrumberri" height="45">
+            </div>
+            <div class="footer-col anim anim-delay-1">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="#areas-de-practica">Servicios</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#agendar-cita">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col anim anim-delay-2">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="mailto:hola@soledadirrumberri.com.ar">Email</a></li>
+                    <li><a href="https://www.instagram.com/soledad.irrumberri" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="https://wa.me/541111111111" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const nav = document.querySelector('#nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        document.querySelectorAll('[data-open]').forEach(btn => {
+            const open = () => document.getElementById(btn.dataset.open).showModal();
+            btn.addEventListener('click', open);
+            btn.addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    open();
+                }
+            });
+        });
+
+        document.querySelectorAll('[data-close]').forEach(btn => {
+            btn.addEventListener('click', () => btn.closest('dialog').close());
+        });
+
+        document.querySelectorAll('dialog').forEach(dialog => {
+            dialog.addEventListener('click', e => {
+                if (e.target === dialog) {
+                    dialog.close();
+                }
+            });
+        });
+
+        const revealObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.anim').forEach(el => revealObserver.observe(el));
+
+        function animateCount(el) {
+            const target = parseInt(el.dataset.count, 10);
+            const duration = 1400;
+            const start = performance.now();
+            const step = now => {
+                const progress = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                el.textContent = Math.round(target * eased);
+                if (progress < 1) requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
+        }
+
+        const countObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCount(entry.target);
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.count').forEach(el => countObserver.observe(el));
+    </script>
 </body>
 
 </html>
