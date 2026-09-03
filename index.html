@@ -16,12 +16,20 @@
                 <img src="isotipo.png" alt="Soledad Irrumberri" height="70">
             </a>
 
-            <ul>
+            <ul id="navList">
                 <li><a href="/">Inicio</a></li>
                 <li><a href="#areas-de-practica">Servicios</a></li>
                 <li><a href="#sobre-mi">Sobre mí</a></li>
                 <li><a href="#agendar-cita">Contacto</a></li>
             </ul>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navList">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <line class="line-1" x1="3" y1="6" x2="21" y2="6"/>
+                    <line class="line-2" x1="3" y1="12" x2="21" y2="12"/>
+                    <line class="line-3" x1="3" y1="18" x2="21" y2="18"/>
+                </svg>
+            </button>
         </nav>
         <div>
             <h1>Entender tu situación, es el <span>primer paso</span> para encontrar una solución</h1>
@@ -51,60 +59,100 @@
         <h2 class="anim">Áreas de práctica</h2>
         <h3 class="anim anim-delay-1">Asesoramiento integral en cada <br> etapa de tu situación legal</h3>
         <ul class="cards">
-            <li class="anim">
+            <li class="anim" data-open="area-modal-1" tabindex="0">
                 <div class="area-img-wrap">
                     <img src="card-area.png" alt="">
                     <div class="area-overlay"></div>
-                    <h4>Planificación sucesoria</h4>
+                    <div class="area-legend">
+                        <h4>Planificación sucesoria</h4>
+                        <span class="area-chevron" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+                        </span>
+                    </div>
                 </div>
             </li>
-            <li class="anim anim-delay-1">
+            <li class="anim anim-delay-1" data-open="area-modal-2" tabindex="0">
                 <div class="area-img-wrap">
                     <img src="card-area.png" alt="">
                     <div class="area-overlay"></div>
-                    <h4>Sucesiones</h4>
+                    <div class="area-legend">
+                        <h4>Sucesiones</h4>
+                        <span class="area-chevron" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+                        </span>
+                    </div>
                 </div>
             </li>
-            <li class="anim anim-delay-2">
+            <li class="anim anim-delay-2" data-open="area-modal-3" tabindex="0">
                 <div class="area-img-wrap">
                     <img src="card-area.png" alt="">
                     <div class="area-overlay"></div>
-                    <h4>Filiación</h4>
+                    <div class="area-legend">
+                        <h4>Filiación</h4>
+                        <span class="area-chevron" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+                        </span>
+                    </div>
                 </div>
             </li>
-            <li class="anim anim-delay-3">
+            <li class="anim anim-delay-3" data-open="area-modal-4" tabindex="0">
                 <div class="area-img-wrap">
                     <img src="card-area.png" alt="">
                     <div class="area-overlay"></div>
-                    <h4>Divorcio y división de sociedad conyugal</h4>
+                    <div class="area-legend">
+                        <h4>Divorcio y división de sociedad conyugal</h4>
+                        <span class="area-chevron" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+                        </span>
+                    </div>
                 </div>
             </li>
-            <li class="anim">
+            <li class="anim" data-open="area-modal-5" tabindex="0">
                 <div class="area-img-wrap">
                     <img src="card-area.png" alt="">
                     <div class="area-overlay"></div>
-                    <h4>Derecho inmobiliario</h4>
+                    <div class="area-legend">
+                        <h4>Derecho inmobiliario</h4>
+                        <span class="area-chevron" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+                        </span>
+                    </div>
                 </div>
             </li>
-            <li class="anim anim-delay-1">
+            <li class="anim anim-delay-1" data-open="area-modal-6" tabindex="0">
                 <div class="area-img-wrap">
                     <img src="card-area.png" alt="">
                     <div class="area-overlay"></div>
-                    <h4>Contratos civiles y comerciales</h4>
+                    <div class="area-legend">
+                        <h4>Contratos civiles y comerciales</h4>
+                        <span class="area-chevron" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+                        </span>
+                    </div>
                 </div>
             </li>
-            <li class="anim anim-delay-2">
+            <li class="anim anim-delay-2" data-open="area-modal-7" tabindex="0">
                 <div class="area-img-wrap">
                     <img src="card-area.png" alt="">
                     <div class="area-overlay"></div>
-                    <h4>Defensa del consumidor</h4>
+                    <div class="area-legend">
+                        <h4>Defensa del consumidor</h4>
+                        <span class="area-chevron" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+                        </span>
+                    </div>
                 </div>
             </li>
-            <li class="anim anim-delay-3">
+            <li class="anim anim-delay-3" data-open="area-modal-8" tabindex="0">
                 <div class="area-img-wrap">
                     <img src="card-area.png" alt="">
                     <div class="area-overlay"></div>
-                    <h4>Derecho laboral</h4>
+                    <div class="area-legend">
+                        <h4>Derecho laboral</h4>
+                        <span class="area-chevron" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+                        </span>
+                    </div>
                 </div>
             </li>
         </ul>
@@ -399,6 +447,23 @@
         const nav = document.querySelector('#nav');
         window.addEventListener('scroll', () => {
             nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        const navToggle = document.querySelector('#navToggle');
+        const navLinks = document.querySelectorAll('#navList a');
+        navToggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            navToggle.classList.toggle('active', isOpen);
+            navToggle.setAttribute('aria-expanded', isOpen);
+            navToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+        });
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+                navToggle.setAttribute('aria-label', 'Abrir menú');
+            });
         });
 
         document.querySelectorAll('[data-open]').forEach(btn => {

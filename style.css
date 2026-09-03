@@ -128,6 +128,39 @@ header nav ul li a:hover {
     border-bottom-color: var(--color-gold);
 }
 
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    padding: 8px;
+    color: var(--color-light-gray);
+    cursor: pointer;
+    line-height: 0;
+}
+
+.nav-toggle svg {
+    display: block;
+}
+
+.nav-toggle .line-1,
+.nav-toggle .line-2,
+.nav-toggle .line-3 {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+}
+
+.nav-toggle.active .line-1 {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.nav-toggle.active .line-2 {
+    opacity: 0;
+}
+
+.nav-toggle.active .line-3 {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
 
 h1, h2, h3, h4, h5, h6 {
     padding: 0;
@@ -219,10 +252,8 @@ section, #areas-de-practica, footer {
 }
 
 #areas-de-practica .cards li {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
+    display: block;
+    cursor: pointer;
 }
 
 #areas-de-practica .cards li img {
@@ -259,21 +290,45 @@ section, #areas-de-practica, footer {
     background: linear-gradient(to top, rgba(20, 20, 25, 0.05) 0%, transparent 60%, transparent 100%);
 }
 
-.area-img-wrap h4 {
+.area-legend {
     position: absolute;
-    bottom: 22px;
-    left: 18px;
-    right: 18px;
+    inset: auto 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 16px;
+    text-align: left;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.area-legend h4 {
     margin: 0;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0px;
     line-height: 1.2;
     color: #ffffff;
-    z-index: 2;
-    pointer-events: none;
-    text-align: left;
+}
+
+.area-chevron {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.area-img-wrap:hover .area-chevron {
+    transform: translateY(-3px);
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 #testimonios {
@@ -561,20 +616,26 @@ footer {
 
 .blog-modal::backdrop {
     background-color: rgba(29, 37, 57, 0.6);
+    animation: backdrop-in 0.3s ease-out;
+}
+
+@keyframes backdrop-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .blog-modal[open] {
-    animation: modal-in 0.25s ease-out;
+    animation: modal-in 0.35s ease-out;
 }
 
 @keyframes modal-in {
     from {
         opacity: 0;
-        transform: translateY(12px);
+        transform: translateY(40px) scale(0.98);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
 }
 
@@ -725,9 +786,16 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    #areas-de-practica .cards li img,
     #areas-de-practica .cards li .area-img-wrap {
         max-width: 100%;
+        aspect-ratio: 3 / 2;
+    }
+
+    #areas-de-practica .cards li img {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     header {
@@ -745,13 +813,46 @@ footer {
     }
 
     header nav ul {
-        gap: 18px;
-        flex-wrap: wrap;
-        justify-content: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: min(78vw, 320px);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 8px;
+        margin: 0;
+        padding: 110px 40px 40px;
+        background-color: var(--color-primary);
+        transform: translateX(100%);
+        transition: transform 0.4s ease;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+    }
+
+    header nav.open ul {
+        transform: translateX(0);
+    }
+
+    header nav ul li {
+        width: 100%;
     }
 
     header nav ul li a {
-        font-size: 12px;
+        display: inline-block;
+        font-size: 18px;
+        padding: 10px 0;
+        border-bottom: none;
+    }
+
+    .nav-toggle {
+        display: block;
+        position: relative;
+        z-index: 101;
+    }
+
+    header nav ul + .nav-toggle {
+        margin-left: auto;
     }
 
     section, #areas-de-practica, footer {
