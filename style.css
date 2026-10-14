@@ -224,6 +224,8 @@ section, #areas-de-practica, footer {
 
 #areas-de-practica {
     background-color: #ffffff;
+    text-align: left;
+    display: block;
 }
 
 #areas-de-practica h2, #testimonios h2, #agendar-cita h2, #sobre-mi h2, #newsletter h2 {
@@ -241,94 +243,168 @@ section, #areas-de-practica, footer {
     letter-spacing: -6%;
 }
 
-#areas-de-practica .cards {
-    list-style: none;
-    margin: 40px 0 0 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    justify-items: center;
-}
-
-#areas-de-practica .cards li {
-    display: block;
-    cursor: pointer;
-}
-
-#areas-de-practica .cards li img {
-    width: 100%;
-    height: auto;
-}
-
-.area-img-wrap {
-    position: relative;
-    width: 100%;
-    max-width: 290px;
-    margin: 0 auto;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.area-img-wrap img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.area-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(20, 20, 25, 0.55) 0%, rgba(20, 20, 25, 0.05) 60%, transparent 100%);
-    border-radius: 10px;
-    pointer-events: none;
-    transition: background 0.4s ease;
-}
-
-.area-img-wrap:hover .area-overlay {
-    background: linear-gradient(to top, rgba(20, 20, 25, 0.05) 0%, transparent 60%, transparent 100%);
-}
-
-.area-legend {
-    position: absolute;
-    inset: auto 0 0 0;
+.servicios-head {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 14px 16px;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto 72px auto;
     text-align: left;
-    z-index: 2;
-    pointer-events: none;
 }
 
-.area-legend h4 {
-    margin: 0;
-    font-size: 16px;
+.servicios-head h3 {
+    color: var(--color-primary);
+}
+
+.servicios-body {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 60px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.servicios-aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+}
+
+.servicios-category {
+    font-size: 18px;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0px;
-    line-height: 1.2;
-    color: #ffffff;
+    letter-spacing: -1%;
+    color: var(--color-primary);
+    margin: 0;
 }
 
-.area-chevron {
+.servicios-sectores {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sector-btn {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    border-left: 2px solid transparent;
+    padding: 10px 16px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    color: #6b6b6b;
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.sector-btn:hover {
+    color: var(--color-primary);
+}
+
+.sector-btn.active {
+    color: var(--color-primary);
+    font-weight: 600;
+    border-left-color: var(--color-gold);
+}
+
+.servicios-main {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.servicios-lead {
+    font-size: 19px;
+    line-height: 150%;
+    color: #343434;
+    letter-spacing: -0.5px;
+    margin: 0 0 28px 0;
+}
+
+.servicios-divider {
+    border: none;
+    border-top: 1px solid #e6e6e6;
+    margin: 0 0 32px 0;
+}
+
+.servicios-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.servicios-list[hidden] {
+    display: none;
+}
+
+.servicios-list:not([hidden]) {
+    animation: panel-in 0.35s ease-out;
+}
+
+@keyframes panel-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.servicio-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: var(--color-cream);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.servicio-icon {
     flex-shrink: 0;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.22);
-    color: #ffffff;
+    width: 68px;
+    height: 68px;
+    border-radius: 16px;
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: var(--color-secondary);
 }
 
-.area-img-wrap:hover .area-chevron {
-    transform: translateY(-3px);
-    background-color: rgba(255, 255, 255, 0.4);
+.servicio-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.servicio-text h4 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: -1%;
+    color: var(--color-primary);
+    margin: 0 0 6px 0;
+}
+
+.servicio-text p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #3a3a3a;
+    letter-spacing: -0.3px;
+    margin: 0;
 }
 
 #testimonios {
@@ -693,15 +769,38 @@ footer {
 }
 
 
-@media (max-width: 1100px) {
-    #areas-de-practica .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    #areas-de-practica .cards {
+@media (max-width: 900px) {
+    .servicios-body {
         grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .servicios-head {
+        margin-bottom: 40px;
+    }
+
+    .servicios-aside {
+        gap: 14px;
+    }
+
+    .servicios-sectores {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 8px;
+        padding-bottom: 6px;
+    }
+
+    .sector-btn {
+        width: auto;
+        white-space: nowrap;
+        border-left: none;
+        border-bottom: 2px solid transparent;
+        padding: 8px 4px;
+    }
+
+    .sector-btn.active {
+        border-bottom-color: var(--color-gold);
     }
 }
 
@@ -782,20 +881,46 @@ footer {
 }
 
 @media (max-width: 768px) {
-    #areas-de-practica .cards {
-        grid-template-columns: 1fr;
+    #areas-de-practica .servicios-head h3 {
+        font-size: 32px;
+        letter-spacing: -2%;
     }
 
-    #areas-de-practica .cards li .area-img-wrap {
-        max-width: 100%;
-        aspect-ratio: 3 / 2;
+    .servicios-category {
+        font-size: 16px;
     }
 
-    #areas-de-practica .cards li img {
-        max-width: 100%;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    .servicios-lead {
+        font-size: 17px;
+    }
+
+    .servicio-card {
+        padding: 20px;
+        gap: 14px;
+        border-radius: 16px;
+    }
+
+    .servicio-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 14px;
+    }
+
+    .servicio-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+.servicio-text {
+    min-width: 0;
+}
+
+.servicio-text h4 {
+        font-size: 19px;
+    }
+
+    .servicio-text p {
+        font-size: 16px;
     }
 
     header {
@@ -914,10 +1039,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-    #areas-de-practica .cards {
-        grid-template-columns: 1fr;
-    }
-
     header article,
     header > div:last-child {
         width: 85%;
