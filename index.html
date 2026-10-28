@@ -13,7 +13,7 @@
     <header>
         <nav id="nav" aria-label="Navegación principal">
             <a href="/" aria-label="Ir al inicio">
-                <img src="isotipo.png" alt="Soledad Irrumberri" height="70">
+                <img src="isotipo.png" alt="Soledad Irrumberri" height="40">
             </a>
 
             <ul id="navList">
@@ -32,144 +32,416 @@
             </button>
         </nav>
         <div>
-            <h1>Entender tu situación, es el <span>primer paso</span> para encontrar una solución</h1>
+            <h1><span>Estrategia legal</span><br>para decisiones que importan</h1>
             <a href="#agendar-cita" class="hero-btn">Agendar cita</a>
         </div>
     </header>
     <main>
     <section id="tags">
         <article class="anim">
-            <h3><span class="count" data-count="50">0</span><span class="suffix">+</span></h3>
+            <h3><span class="count" data-count="1000">0</span><span class="suffix">+</span></h3>
             <p>Casos de éxito</p>
         </article>
         <article class="anim anim-delay-1">
-            <h3><span class="count" data-count="15">0</span><span class="suffix">+</span></h3>
+            <h3><span class="count" data-count="11">0</span><span class="suffix">+</span></h3>
             <p>Años de experiencia</p>
         </article>
         <article class="anim anim-delay-2">
-            <h3><span class="count" data-count="120">0</span><span class="suffix">+</span></h3>
+            <h3><span class="count" data-count="2000">0</span><span class="suffix">+</span></h3>
             <p>Asesorías brindadas</p>
         </article>
-        <article class="anim anim-delay-3">
-            <h3><span class="count" data-count="98">0</span><span class="suffix">%</span></h3>
-            <p>Clientes satisfechos</p>
-        </article>
     </section>
-    <section id="areas-de-practica">
-        <div class="servicios-head anim">
-            <h2>Servicios</h2>
-            <h3>Asesoramiento integral en cada etapa de tu situación legal</h3>
+    
+<section id="areas-de-practica">
+    <div class="servicios-head anim">
+        <h3>Asesoramiento integral <br> en cada etapa de tu situación legal</h3>
+    </div>
+
+    <div class="servicios-body">
+
+        <!-- Navegación de servicios -->
+        <div class="servicios-aside anim anim-delay-1">
+            <p class="servicios-category">Nuestros servicios</p>
+
+            <ul class="servicios-sectores" role="tablist"
+                aria-label="Servicios legales" aria-orientation="vertical">
+
+                <li>
+                    <button class="sector-btn active" role="tab"
+                        aria-selected="true" tabindex="0"
+                        id="tab-laboral" aria-controls="sector-laboral">
+                        Derecho laboral
+                    </button>
+                </li>
+
+                <li>
+                    <button class="sector-btn" role="tab"
+                        aria-selected="false" tabindex="-1"
+                        id="tab-consumo" aria-controls="sector-consumo">
+                        Defensa del consumidor
+                    </button>
+                </li>
+
+                <li>
+                    <button class="sector-btn" role="tab"
+                        aria-selected="false" tabindex="-1"
+                        id="tab-sucesiones" aria-controls="sector-sucesiones">
+                        Sucesiones
+                    </button>
+                </li>
+
+                <li>
+                    <button class="sector-btn" role="tab"
+                        aria-selected="false" tabindex="-1"
+                        id="tab-planificacion" aria-controls="sector-planificacion">
+                        Planificación sucesoria
+                    </button>
+                </li>
+
+                <li>
+                    <button class="sector-btn" role="tab"
+                        aria-selected="false" tabindex="-1"
+                        id="tab-contratos" aria-controls="sector-contratos">
+                        Contratos civiles y comerciales
+                    </button>
+                </li>
+
+                <li>
+                    <button class="sector-btn" role="tab"
+                        aria-selected="false" tabindex="-1"
+                        id="tab-divorcio" aria-controls="sector-divorcio">
+                        Divorcio y división de bienes
+                    </button>
+                </li>
+
+                <li>
+                    <button class="sector-btn" role="tab"
+                        aria-selected="false" tabindex="-1"
+                        id="tab-filiacion" aria-controls="sector-filiacion">
+                        Filiación
+                    </button>
+                </li>
+
+                <li>
+                    <button class="sector-btn" role="tab"
+                        aria-selected="false" tabindex="-1"
+                        id="tab-inmobiliario" aria-controls="sector-inmobiliario">
+                        Derecho inmobiliario
+                    </button>
+                </li>
+            </ul>
         </div>
 
-        <div class="servicios-body">
-            <div class="servicios-aside anim anim-delay-1">
-                <p class="servicios-category">Áreas de práctica</p>
-                <ul class="servicios-sectores" role="tablist" aria-label="Sectores de práctica">
-                    <li>
-                        <button class="sector-btn active" role="tab" aria-selected="true" id="tab-familia" aria-controls="sector-familia">Familia</button>
-                    </li>
-                    <li>
-                        <button class="sector-btn" role="tab" aria-selected="false" id="tab-sucesiones" aria-controls="sector-sucesiones">Sucesiones</button>
-                    </li>
-                    <li>
-                        <button class="sector-btn" role="tab" aria-selected="false" id="tab-civil" aria-controls="sector-civil">Civil e inmobiliario</button>
-                    </li>
-                    <li>
-                        <button class="sector-btn" role="tab" aria-selected="false" id="tab-laboral" aria-controls="sector-laboral">Laboral y consumo</button>
-                    </li>
-                </ul>
+        <!-- Contenido del servicio seleccionado -->
+        <div class="servicios-main anim anim-delay-2">
+
+            <!-- 1. Derecho laboral -->
+            <div class="servicios-list" id="sector-laboral"
+                role="tabpanel" aria-labelledby="tab-laboral" tabindex="0">
+
+                <div class="servicio-card">
+                    <span class="servicio-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="7" width="18" height="13" rx="2"/>
+                            <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/>
+                            <path d="M3 12h18"/>
+                        </svg>
+                    </span>
+
+                    <div class="servicio-text">
+                        <h4>Derecho laboral</h4>
+                        <h5 class="servicio-subtitulo">Asesoramiento legal para trabajadores y empleadores</h5>
+
+                        <p>
+                            Te acompañamos en la resolución de conflictos
+                            laborales, accidentes de trabajo y consultas
+                            vinculadas a los derechos y obligaciones que rigen
+                            las relaciones laborales, incluyendo cuestiones
+                            sindicales.
+                        </p>
+
+                        <p>
+                            Brindamos asesoramiento empresarial orientado a las
+                            relaciones laborales, elaboración y revisión de
+                            contratos, políticas internas, reglamentos de
+                            convivencia, prevención de conflictos e inspecciones
+                            para que puedas tomar decisiones informadas y actuar
+                            conforme a la normativa vigente.
+                        </p>
+                    </div>
+                </div>
             </div>
 
-            <div class="servicios-main anim anim-delay-2">
-                <p class="servicios-lead">Acompaño a personas y familias en cada etapa de su situación legal, con un enfoque claro, cercano y profesional. Estas son las áreas en las que puedo ayudarte.</p>
-                <hr class="servicios-divider">
+            <!-- 2. Defensa del consumidor -->
+            <div class="servicios-list" id="sector-consumo"
+                role="tabpanel" aria-labelledby="tab-consumo" tabindex="0" hidden>
 
-                <ul class="servicios-list" id="sector-familia" role="tabpanel" aria-labelledby="tab-familia">
-                    <li class="servicio-card">
-                        <span class="servicio-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.2"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M15.5 20a4.5 4.5 0 0 1 5-4.4"/></svg>
-                        </span>
-                        <div class="servicio-text">
-                            <h4>Filiación</h4>
-                            <p>Reconocimiento, impugnación y determinación de filiación, para proteger derechos y fortalecer lazos familiares.</p>
-                        </div>
-                    </li>
-                    <li class="servicio-card">
-                        <span class="servicio-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 4.6 5 .7-3.6 3.6.9 5-4.5-2.4L7.5 16.9l.9-5L4.8 8.3l5-.7z"/><path d="M12 14v7"/></svg>
-                        </span>
-                        <div class="servicio-text">
-                            <h4>Divorcio y división de sociedad conyugal</h4>
-                            <p>Procesos de divorcio, liquidación de bienes y acuerdos patrimoniales.</p>
-                        </div>
-                    </li>
-                </ul>
+                <div class="servicio-card">
+                    <span class="servicio-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/>
+                            <path d="M9.5 12l1.8 1.8L15 10"/>
+                        </svg>
+                    </span>
 
-                <ul class="servicios-list" id="sector-sucesiones" role="tabpanel" aria-labelledby="tab-sucesiones" hidden>
-                    <li class="servicio-card">
-                        <span class="servicio-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M8 13h6"/><path d="M8 17h4"/></svg>
-                        </span>
-                        <div class="servicio-text">
-                            <h4>Planificación sucesoria</h4>
-                            <p>Organización de bienes para el futuro: evaluación integral, estrategia jurídica, plan de trabajo y acompañamiento profesional.</p>
-                        </div>
-                    </li>
-                    <li class="servicio-card">
-                        <span class="servicio-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7l-3 6a3 3 0 0 0 6 0z"/><path d="M19 7l-3 6a3 3 0 0 0 6 0z"/><path d="M8 21h8"/></svg>
-                        </span>
-                        <div class="servicio-text">
-                            <h4>Sucesiones</h4>
-                            <p>Gestión de trámites sucesorios, declaratorias de herederos, inscripción de bienes y resolución de conflictos hereditarios.</p>
-                        </div>
-                    </li>
-                </ul>
+                    <div class="servicio-text">
+                        <h4>Defensa del consumidor</h4>
+                        <h5 class="servicio-subtitulo">
+                            Protección de los derechos del consumidor
+                        </h5>
 
-                <ul class="servicios-list" id="sector-civil" role="tabpanel" aria-labelledby="tab-civil" hidden>
-                    <li class="servicio-card">
-                        <span class="servicio-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 4l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9.5 20v-5h5v5"/></svg>
-                        </span>
-                        <div class="servicio-text">
-                            <h4>Derecho inmobiliario</h4>
-                            <p>Compraventas, alquileres, contratos y conflictos vinculados a bienes inmuebles.</p>
-                        </div>
-                    </li>
-                    <li class="servicio-card">
-                        <span class="servicio-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M9 8h6"/><path d="M9 12h6"/><path d="M9 16h3"/></svg>
-                        </span>
-                        <div class="servicio-text">
-                            <h4>Contratos civiles y comerciales</h4>
-                            <p>Redacción, revisión y asesoramiento en todo tipo de contratos, previniendo conflictos.</p>
-                        </div>
-                    </li>
-                </ul>
+                        <p>
+                            Brindamos asesoramiento y acompañamiento legal ante
+                            incumplimientos, cobros indebidos, productos
+                            defectuosos y otras situaciones que vulneren tus
+                            derechos como consumidor.
+                        </p>
 
-                <ul class="servicios-list" id="sector-laboral" role="tabpanel" aria-labelledby="tab-laboral" hidden>
-                    <li class="servicio-card">
-                        <span class="servicio-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg>
-                        </span>
-                        <div class="servicio-text">
-                            <h4>Derecho laboral</h4>
-                            <p>Para empleados: conflictos laborales, accidentes de trabajo, vínculo con el sindicato. Para empleadores: normativa laboral vigente, contratos, políticas internas y prevención de conflictos.</p>
-                        </div>
-                    </li>
-                    <li class="servicio-card">
-                        <span class="servicio-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg>
-                        </span>
-                        <div class="servicio-text">
-                            <h4>Defensa del consumidor</h4>
-                            <p>Asesoramiento legal para reclamos frente a abusos comerciales.</p>
-                        </div>
-                    </li>
-                </ul>
+                        <p>
+                            Analizamos tu caso y las alternativas disponibles
+                            para gestionar tu reclamo y buscar una solución
+                            adecuada.
+                        </p>
+                    </div>
+                </div>
             </div>
+
+            <!-- 3. Sucesiones -->
+            <div class="servicios-list" id="sector-sucesiones"
+                role="tabpanel" aria-labelledby="tab-sucesiones" tabindex="0" hidden>
+
+                <div class="servicio-card">
+                    <span class="servicio-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/>
+                            <path d="M14 3v5h5"/>
+                            <path d="M8 13h6M8 17h4"/>
+                        </svg>
+                    </span>
+
+                    <div class="servicio-text">
+                        <h4>Sucesiones</h4>
+                        <h5 class="servicio-subtitulo">
+                            Sucesiones y patrimonio familiar
+                        </h5>
+
+                        <p>
+                            Te acompañamos durante todo el proceso sucesorio,
+                            desde la etapa previa al inicio del expediente
+                            hasta la declaratoria de herederos, partición,
+                            adjudicación e inscripción de los bienes que
+                            integran el acervo hereditario.
+                        </p>
+
+                        <p>
+                            Intervenimos en conflictos hereditarios, buscando
+                            alternativas que permitan resguardar los derechos
+                            de los herederos y avanzar hacia una resolución
+                            conforme a cada situación.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Planificación sucesoria -->
+            <div class="servicios-list" id="sector-planificacion"
+                role="tabpanel" aria-labelledby="tab-planificacion" tabindex="0" hidden>
+
+                <div class="servicio-card">
+                    <span class="servicio-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3v18M5 7h14"/>
+                            <path d="M5 7l-3 6a3 3 0 0 0 6 0z"/>
+                            <path d="M19 7l-3 6a3 3 0 0 0 6 0z"/>
+                            <path d="M8 21h8"/>
+                        </svg>
+                    </span>
+
+                    <div class="servicio-text">
+                        <h4>Planificación sucesoria</h4>
+                        <h5 class="servicio-subtitulo">
+                            Planificación y transmisión del patrimonio
+                        </h5>
+
+                        <p>
+                            Te asesoramos en la organización y planificación
+                            de la transmisión de tus bienes, considerando
+                            tus objetivos personales y familiares, dentro
+                            del marco legal vigente.
+                        </p>
+
+                        <p>
+                            Una planificación adecuada permite anticipar
+                            decisiones, brindar mayor previsibilidad y
+                            reducir posibles conflictos futuros.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Contratos civiles y comerciales -->
+            <div class="servicios-list" id="sector-contratos"
+                role="tabpanel" aria-labelledby="tab-contratos" tabindex="0" hidden>
+
+                <div class="servicio-card">
+                    <span class="servicio-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 3h8a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/>
+                            <path d="M9 8h6M9 12h6M9 16h3"/>
+                        </svg>
+                    </span>
+
+                    <div class="servicio-text">
+                        <h4>Contratos civiles y comerciales</h4>
+                        <h5 class="servicio-subtitulo">
+                            Acuerdos claros y seguros
+                        </h5>
+
+                        <p>
+                            Nos encargamos de la redacción, revisión y
+                            asesoramiento de contratos civiles y comerciales,
+                            adaptados a las necesidades de cada persona
+                            o empresa.
+                        </p>
+
+                        <p>
+                            El objetivo es establecer condiciones claras,
+                            resguardar tus intereses y prevenir posibles
+                            conflictos, brindando mayor seguridad jurídica
+                            al momento de celebrar acuerdos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Divorcio y división de bienes -->
+            <div class="servicios-list" id="sector-divorcio"
+                role="tabpanel" aria-labelledby="tab-divorcio" tabindex="0" hidden>
+
+                <div class="servicio-card">
+                    <span class="servicio-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="8" r="3"/>
+                            <circle cx="17" cy="9" r="2.2"/>
+                            <path d="M3 20a6 6 0 0 1 12 0"/>
+                            <path d="M15.5 20a4.5 4.5 0 0 1 5-4.4"/>
+                        </svg>
+                    </span>
+
+                    <div class="servicio-text">
+                        <h4>Divorcio y división de bienes</h4>
+                        <h5 class="servicio-subtitulo">
+                            Asesoramiento en derecho de familia
+                        </h5>
+
+                        <p>
+                            Te asesoramos en procesos de divorcio, división y
+                            liquidación de bienes, acuerdos patrimoniales y
+                            demás cuestiones vinculadas a la disolución de
+                            la sociedad conyugal.
+                        </p>
+
+                        <p>
+                            Trabajamos para que puedas comprender tus derechos,
+                            evaluar las alternativas disponibles y transitar
+                            el proceso con claridad y respaldo legal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Filiación -->
+            <div class="servicios-list" id="sector-filiacion"
+                role="tabpanel" aria-labelledby="tab-filiacion" tabindex="0" hidden>
+
+                <div class="servicio-card">
+                    <span class="servicio-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="8" r="3"/>
+                            <circle cx="17" cy="9" r="2.2"/>
+                            <path d="M3 20a6 6 0 0 1 12 0"/>
+                            <path d="M15.5 20a4.5 4.5 0 0 1 5-4.4"/>
+                        </svg>
+                    </span>
+
+                    <div class="servicio-text">
+                        <h4>Filiación</h4>
+                        <h5 class="servicio-subtitulo">
+                            Filiación y derechos familiares
+                        </h5>
+
+                        <p>
+                            Brindamos asesoramiento integral en procesos de
+                            reconocimiento, determinación e impugnación de
+                            filiación.
+                        </p>
+
+                        <p>
+                            Analizamos cada situación de manera particular,
+                            procurando la protección de los derechos
+                            involucrados y brindando el acompañamiento
+                            necesario durante las distintas etapas del
+                            procedimiento legal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Derecho inmobiliario -->
+            <div class="servicios-list" id="sector-inmobiliario"
+                role="tabpanel" aria-labelledby="tab-inmobiliario" tabindex="0" hidden>
+
+                <div class="servicio-card">
+                    <span class="servicio-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 10.5 12 4l9 6.5"/>
+                            <path d="M5 10v10h14V10"/>
+                            <path d="M9.5 20v-5h5v5"/>
+                        </svg>
+                    </span>
+
+                    <div class="servicio-text">
+                        <h4>Derecho inmobiliario</h4>
+                        <h5 class="servicio-subtitulo">
+                            Seguridad jurídica inmobiliaria
+                        </h5>
+
+                        <p>
+                            Te asesoramos en compraventas, alquileres,
+                            contratos y conflictos relacionados con
+                            bienes inmuebles.
+                        </p>
+
+                        <p>
+                            Revisamos y ordenamos la documentación necesaria
+                            antes de realizar la operación inmobiliaria
+                            pretendida y te acompañamos para que puedas tomar
+                            decisiones informadas, en resguardo de tus intereses.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
+
     <section id="testimonios">
         <h2 class="anim">Testimonios</h2>
         <h3 class="anim anim-delay-1">Lo que dicen quienes ya confiaron en mí</h3>

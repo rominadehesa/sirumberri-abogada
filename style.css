@@ -75,7 +75,7 @@ header > div:last-child {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    width: 40%;
+    width: 60%;
     text-align: center;
 }
 
@@ -193,7 +193,7 @@ section, #areas-de-practica, footer {
 #tags{
     padding: 6vh 8vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     gap: 15vw;
@@ -390,12 +390,21 @@ section, #areas-de-practica, footer {
 }
 
 .servicio-text h4 {
-    font-size: 22px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 130%;
     letter-spacing: -1%;
     color: var(--color-primary);
-    margin: 0 0 6px 0;
+    margin: 0 0 16px 0;
+}
+
+.servicio-text h5 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: -1%;
+    color: var(--color-primary);
+    margin: 0 0 10px 0;
 }
 
 .servicio-text p {
