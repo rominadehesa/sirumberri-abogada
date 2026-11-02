@@ -542,13 +542,14 @@ section, #areas-de-practica, footer {
     }
 
     .stats {
-        margin-top: 40px;
+        margin-top: 26px;
+        margin-bottom: 7vh;
         aspect-ratio: auto;
         overflow: visible;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 36px;
+        gap: 29px;
     }
 
     .stat {
