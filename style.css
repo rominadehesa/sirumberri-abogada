@@ -1871,7 +1871,7 @@ footer :where(a, button):focus-visible {
     }
 
     .hero-foto img {
-        object-position: center 25%;
+        object-position: center 66%;
     }
 
     header::before {
