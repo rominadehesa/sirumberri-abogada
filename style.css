@@ -523,7 +523,7 @@ section, #areas-de-practica, footer {
 
 @media (max-width: 760px) {
     #tags {
-        padding-bottom: 56px;
+        padding-bottom: 72px;
     }
 
     .tags-intro {
@@ -1788,8 +1788,13 @@ footer :where(a, button):focus-visible {
         order: -1;
     }
 
+    /* Mismo encuadre que las demas fotos del sitio */
     .asesoria-photo {
-        aspect-ratio: 1 / 1;
+        aspect-ratio: 4 / 5;
+    }
+
+    .asesoria-photo img {
+        object-position: center 30%;
     }
 }
 
@@ -1817,6 +1822,17 @@ footer :where(a, button):focus-visible {
     .asesoria-num {
         font-size: 2rem;
     }
+
+    /* Marca del footer: el rol Abogada va debajo del nombre en mobile */
+    .footer-wordmark {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .footer-brand-role::before {
+        display: none;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -1831,14 +1847,14 @@ footer :where(a, button):focus-visible {
     }
 
     header {
-        /* El contenido arranca debajo de la barra fija: nunca la pisa */
+        /* El contenido se apoya abajo: arriba queda la foto de Soledad visible */
         height: auto;
         min-height: 72vh;
-        justify-content: flex-start;
+        justify-content: flex-end;
         padding: 96px 24px 64px;
     }
 
-    /* Mobile: foto de Soledad de fondo, cubierta por el gradiente */
+    /* Mobile: foto de Soledad de fondo, cubierta por el gradiente (mas claro arriba) */
     .hero-foto {
         display: block;
         position: absolute;
@@ -1857,9 +1873,10 @@ footer :where(a, button):focus-visible {
         position: absolute;
         inset: 0;
         background: linear-gradient(180deg,
-                rgba(29, 37, 57, 0.95) 0%,
-                rgba(29, 37, 57, 0.87) 45%,
-                rgba(29, 37, 57, 0.62) 100%);
+                rgba(29, 37, 57, 0.45) 0%,
+                rgba(29, 37, 57, 0.7) 45%,
+                rgba(29, 37, 57, 0.95) 75%,
+                rgba(29, 37, 57, 0.98) 100%);
         z-index: 1;
         pointer-events: none;
     }
@@ -1967,7 +1984,7 @@ footer :where(a, button):focus-visible {
     }
 
     section, #areas-de-practica, footer {
-        padding: 64px 24px;
+        padding: 64px 24px 72px;
     }
 
     #tags {
@@ -2191,7 +2208,7 @@ footer :where(a, button):focus-visible {
     align-items: center;
     gap: 12px;
     min-height: 46px;
-    margin-top: 8px;
+    margin-top: 22px;
     padding: 13px 26px;
     border: 1px solid rgba(29, 37, 57, 0.35);
     border-radius: 999px;
