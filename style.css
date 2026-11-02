@@ -1268,11 +1268,11 @@ footer {
 
 .footer-col h4 {
     margin: 0 0 18px 0;
-    font-size: 17px;
-    font-weight: 500;
-    letter-spacing: -0.01em;
-    text-transform: none;
-    color: var(--color-light-gray);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-gold);
 }
 
 .footer-col ul {
