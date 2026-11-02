@@ -1754,8 +1754,11 @@ footer :where(a, button):focus-visible {
     }
 
     header {
-        height: 70vh;
-        padding: 0 24px;
+        /* El contenido arranca debajo de la barra fija: nunca la pisa */
+        height: auto;
+        min-height: 72vh;
+        justify-content: flex-start;
+        padding: 96px 24px 64px;
         /* Mobile: azul plano, como el diseño. La foto solo vive en desktop y en la foto de Cómo trabajo */
         background-image: none;
     }
