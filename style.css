@@ -1726,6 +1726,11 @@ footer :where(a, button):focus-visible {
         grid-template-columns: minmax(0, 1fr);
     }
 
+    /* Mobile: primero el retrato, despues el texto */
+    .asesoria-media {
+        order: -1;
+    }
+
     .asesoria-photo {
         aspect-ratio: 1 / 1;
     }
