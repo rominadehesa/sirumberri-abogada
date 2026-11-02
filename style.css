@@ -465,7 +465,7 @@ section, #areas-de-practica, footer {
 
 @media (max-width: 760px) {
     #tags {
-        padding-bottom: 0;
+        padding-bottom: 56px;
     }
 
     .tags-intro {
@@ -477,20 +477,34 @@ section, #areas-de-practica, footer {
         display: none;
     }
 
+    /* Las cifras van en fila para no alargar la seccion */
     .stats {
-        margin-top: 48px;
+        margin-top: 40px;
         aspect-ratio: auto;
         overflow: visible;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: start;
+        justify-items: center;
+        gap: 16px;
     }
 
     .stat {
         position: static;
         transform: none;
         width: auto;
+        text-align: center;
+    }
+
+    .stat-num {
+        font-size: clamp(1.75rem, 6vw, 2.25rem);
+    }
+
+    .stat-label {
+        margin-top: 6px;
+        font-size: 12px;
+        line-height: 140%;
+        color: #4A5373;
     }
 }
 
@@ -1757,7 +1771,7 @@ footer :where(a, button):focus-visible {
     header {
         /* El contenido arranca debajo de la barra fija: nunca la pisa */
         height: auto;
-        min-height: 72vh;
+        min-height: 64vh;
         justify-content: flex-start;
         padding: 96px 24px 64px;
         /* Mobile: azul plano, como el diseño. La foto solo vive en desktop y en la foto de Cómo trabajo */
