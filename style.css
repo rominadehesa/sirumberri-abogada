@@ -71,6 +71,64 @@ header {
     justify-content: center;
     align-items: flex-start;
     position: relative;
+    overflow: hidden;
+}
+
+/* Foto del hero: detras del gradiente. Desktop: completa a la derecha; mobile: de fondo */
+.hero-foto {
+    display: none;
+    margin: 0;
+}
+
+.hero-foto img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 28%;
+}
+
+@media (min-width: 769px) {
+    .hero-foto {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: auto;
+        z-index: 0;
+        /* El borde izquierdo de la foto se funde con el azul */
+        -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 30%);
+        mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 30%);
+    }
+
+    /* Gradiente: azul solido a la izquierda, se abre sobre la foto hacia la derecha */
+    header::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg,
+                var(--color-primary) 0%,
+                var(--color-primary) 38%,
+                rgba(29, 37, 57, 0.9) 52%,
+                rgba(29, 37, 57, 0.4) 66%,
+                rgba(29, 37, 57, 0.12) 82%,
+                rgba(29, 37, 57, 0.06) 100%);
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    /* Con la foto a la derecha, el hatch no aporta */
+    .hero-hatch {
+        display: none;
+    }
+}
+
+/* El texto y los botones siempre sobre la capa de gradiente */
+header article,
+header > div:last-child {
+    position: relative;
+    z-index: 2;
 }
 
 header nav {
@@ -1775,11 +1833,35 @@ footer :where(a, button):focus-visible {
     header {
         /* El contenido arranca debajo de la barra fija: nunca la pisa */
         height: auto;
-        min-height: 64vh;
+        min-height: 72vh;
         justify-content: flex-start;
         padding: 96px 24px 64px;
-        /* Mobile: azul plano, como el diseño. La foto solo vive en desktop y en la foto de Cómo trabajo */
-        background-image: none;
+    }
+
+    /* Mobile: foto de Soledad de fondo, cubierta por el gradiente */
+    .hero-foto {
+        display: block;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .hero-foto img {
+        object-position: center 25%;
+    }
+
+    header::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg,
+                rgba(29, 37, 57, 0.95) 0%,
+                rgba(29, 37, 57, 0.87) 45%,
+                rgba(29, 37, 57, 0.62) 100%);
+        z-index: 1;
+        pointer-events: none;
     }
 
     /* Mobile: sin hatch (los botones a ancho completo no dejan rincón libre) */
