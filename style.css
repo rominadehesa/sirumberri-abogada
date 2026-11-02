@@ -472,21 +472,20 @@ section, #areas-de-practica, footer {
         max-width: 520px;
     }
 
+    /* Mobile: sin circulos; cifras apiladas una debajo de la otra */
     .stats-circle,
     .stats-dot {
         display: none;
     }
 
-    /* Las cifras van en fila para no alargar la seccion */
     .stats {
         margin-top: 40px;
         aspect-ratio: auto;
         overflow: visible;
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        align-items: start;
-        justify-items: center;
-        gap: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 36px;
     }
 
     .stat {
@@ -497,12 +496,12 @@ section, #areas-de-practica, footer {
     }
 
     .stat-num {
-        font-size: clamp(1.75rem, 6vw, 2.25rem);
+        font-size: clamp(2.25rem, 7vw, 2.75rem);
     }
 
     .stat-label {
-        margin-top: 6px;
-        font-size: 12px;
+        margin-top: 8px;
+        font-size: 13px;
         line-height: 140%;
         color: #4A5373;
     }
