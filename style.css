@@ -71,6 +71,7 @@ header {
     justify-content: center;
     align-items: flex-start;
     position: relative;
+    height: 90vh;
     overflow: hidden;
 }
 
