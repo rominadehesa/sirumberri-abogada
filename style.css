@@ -2437,7 +2437,8 @@ footer :where(a, button):focus-visible {
 }
 
 .about__facts dd span {
-    display: inline;
+    display: block;
+    margin-top: 6px;
     font-size: 15px;
     color: #5F6A80;
 }
